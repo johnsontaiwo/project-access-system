@@ -1,0 +1,16 @@
+<ul>
+  <%@projects.all.each do |project|%>
+    <li>
+    <h3>Title:<%=project.title%></h3>
+    <h3>Description:<%=project.description%></h3>
+    <h3>Contract Number:<%=project.contract_number%></h3>
+    <h3>Solicitation Number:<%=project.solicitation_number%></h3>
+    <h3>General Contractor:<%=project.general_contractor%></h3>
+    <h3>Type:<%=project.project_type%></h3>
+    <h3>Project Amount:<%=project.project_amount%></h3>
+    <h3>Start Date:<%=project.start_date%></h3>
+    <h3>Sunstantial Completion Date:<%=project.substantial_completion_date%></h3>
+    <h3>Final Completion Date:<%=project.final_completion_date%></h3>
+    </li>
+    <%end%>
+</ul>
