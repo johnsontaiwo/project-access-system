@@ -1,0 +1,18 @@
+<h3>Contractors List</h3>
+<br>
+<ul>
+  <%@contractors.all.each do |contractor|%>
+ <li>
+    Name:<%=contractor.name%><br>
+    Ssn:<%=contractor.ssn%><br>
+    Company Name:<%=contractor.company_name%><br>
+    Address<%=contractor.company_address%><br>
+    Certification:<%=contractor.certification%>
+  </li>
+  <%end%>
+</ul>
+
+<a href='/projects'>Back to homepage</a><br>
+
+
+ <a href='/contractors/new'>Add Contractor</a><br></br>

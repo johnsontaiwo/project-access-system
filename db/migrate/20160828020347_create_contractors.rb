@@ -5,7 +5,7 @@ class CreateContractors < ActiveRecord::Migration
       t.string :company_name
       t.string :company_address
       t.integer :ssn
-      t.string :certificaton
+      t.string :certification
     end
   end
 end

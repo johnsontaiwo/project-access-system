@@ -14,4 +14,4 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem "tux"
-#gem 'capybara'
+gem 'capybara'
