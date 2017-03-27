@@ -10,37 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830000519) do
-
-  create_table "contractor_projects", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "project_id"
-    t.integer  "contractor_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "contractors", force: :cascade do |t|
-    t.string  "name"
-    t.string  "company_name"
-    t.string  "company_address"
-    t.integer "ssn"
-    t.string  "certificaton"
-    t.string  "certification"
-  end
+ActiveRecord::Schema.define(version: 20170326202740) do
 
   create_table "projects", force: :cascade do |t|
     t.string  "title"
     t.string  "description"
     t.string  "general_contractor"
     t.string  "project_type"
-    t.text    "contract_number"
-    t.integer "solicitation_number"
-    t.text    "contract_amount"
-    t.text    "start_date"
-    t.text    "substantial_completion_date"
-    t.text    "final_completion_date"
-    t.text    "project_site"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

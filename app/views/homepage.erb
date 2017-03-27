@@ -1,9 +1,8 @@
 <h4>Welcome to Project Access System</h4><br>
-
-<a href='/login'>Log in</a><br>
-       <p>Or</p>
-<a href='/account'>Create account</a><br>
-    <h4>to continue.</h4>
+<% if logged_in?%>
+Welcome, <%= current_user.username %>
+<a href='/users/<%=current_user.id%>'>Go to your projects</a>
 
 
+<% end %>
 

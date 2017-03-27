@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-  </head>
+<head>
+  <title></title>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="/">Home</a> |
+    <% if logged_in? %>
+      <a href='/projects/new'>Add new Project</a> |
+      <a href="/projects">Projects</a> | 
+      <a href='/logout'>Log out</a>
+      
+      <%#form action="/logout" method="post">
+        <input name="_method" type="hidden" value="delete" />
+        <input style="border: none; background: white; display: inline-block; cursor: pointer;" type="submit" value="Log out" />
+      </form>
+    <% else %>
+    <% else %>
+      <a href="/account">Create account</a>
+     <a href="/login">log in</a>
+    <% end %>
+  </div>
+
+  <%= yield %>
+
+</body>
 </html>
